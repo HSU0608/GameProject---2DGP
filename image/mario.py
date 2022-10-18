@@ -3,7 +3,6 @@ from pico2d import *
 WIDTH, HEIGHT = 800, 600
 
 def handle_events():
-    # fill here
     global running
     global look
     global go
@@ -61,7 +60,7 @@ while running:
     if y > 40:
         down_vector -= g
     if jump:
-        down_vector = 40
+        down_vector = 50 #점프 높이
         jump = False
     elif y <= 40:
         y = 40

@@ -20,18 +20,20 @@ def exit():
 
 def update():
     global logo_time
+    delay(0.01)
+    logo_time += 0.01
     # global running
     if logo_time > 1.0:
         logo_time = 0
         # game_framework.quit()
-        game_framework.change_state(play_state)
-    delay(0.01)
-    logo_time += game_framework.frame_time
+        game_framework.change_state(title_state)
+        # running = False
 
     # fill here
     pass
 
 def draw():
+    global image
     clear_canvas()
     image.draw(400, 300)
     update_canvas()
